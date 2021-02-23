@@ -26,12 +26,12 @@ public class NotaEntity {
 	@Column(name = "id")
 	private Integer id;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "id_alumnos") // Como se llama en la tabla notas
 	private AlumnoEntity alumnos;
 	
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "id_asignaturas") // Como se llama en la tabla notas
 	private AsignaturaEntity asignaturas;
 	
